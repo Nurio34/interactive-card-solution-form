@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor</title>
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+<body>
+
+    <header class="main--header">
+        <picture class="bg--color">
+            <source media="(min-width: 900px)" srcset="./images/bg-main-desktop.png">
+            <img src="./images/bg-main-mobile.png" alt="">
+        </picture>
+        <div class="card--back">
+            <img class="back" src="./images/bg-card-back.png" alt="credit card backside">
+            <span class="cvc">000</span>
+        </div>
+        <div class="card--front">
+            <img class="front" src="./images/bg-card-front.png" alt="credit card face">
+            <img class="logo" src="./images/card-logo.svg" alt="">
+            <p class="card--number">0000 0000 0000 0000</p>
+            <p class="card--owner">Jane Appleseed</p>
+            <p class="exp--date">00/00</p>
+        </div>
+    </header>
+
+    <main>
+        <form class="form" action="/index2/index2.html" method="get">
+                <div class="input--name inputs">
+                    <label for="name">Cardholder Name</label>
+                    <input type="text" name="Name" id="name" required placeholder="e.g. Jane Appleseed"
+                    pattern="[\D]{0,30}" maxlength="21">
+                    <div class="border"></div>
+                    <p class="warning--format">Wrong format,letters only</p>
+                    <p class="warning--blank">Can't be blank</p>
+                </div>
+                <div class="input--card-number inputs">
+                    <label for="number">Card Number</label>
+                    <input type="text" name="Number" id="number" required placeholder="e.g. 1234 5678 9123 0000"
+                    pattern="[\d\s]{19}" maxlength="19">
+                    <div class="border"></div>
+                    <p class="warning--format">Wrong format,numbers only</p>
+                    <p class="warning--blank">Can't be blank</p>
+                </div>
+                <div class="exp-date--container">
+                    <div class="input--exp inputs">
+                        <label for="date"> Exp. Date</label>
+                        <input type="text" name="Month" id="month" required placeholder="MM"
+                        pattern="[\d]{2}" maxlength="2">
+                        <div class="border"></div>
+                        <p class="warning--format">Wrong format,numbers only</p>
+                        <p class="warning--blank">Can't be blank</p>
+                    </div>
+                    <div class="input--date inputs">
+                        <label for="year"> (MM/YY)</label>
+                        <input type="text" name="Year" id="year" required placeholder="YY"
+                        pattern="[\d]{2}" maxlength="2">
+                        <div class="border"></div>
+                    </div>
+                    <div class="input--cvc inputs">
+                        <label for="cvc">CVC</label>
+                        <input type="text" name="Cvc" id="cvc" required placeholder="e.g. 123"
+                        pattern="[\d]{3}" maxlength="3">
+                        <div class="border"></div>
+                        <p class="warning--blank">Can't be blank</p>
+                    </div>
+                
+                </div>
+            <button type="submit">Confirm</button>     
+        </form>
+    </main>
+
+    <!-- <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+      </div> -->
+</body>
+
+</html>
